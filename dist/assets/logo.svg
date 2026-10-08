@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="98" fill="#FFFFFF" />
+
+  <!-- Outer circular blue ring -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#163E93" stroke-width="3.2" />
+
+  <!-- Curved Text Paths -->
+  <defs>
+    <path id="cmgc-top-arc" d="M 22 100 A 78 78 0 0 1 178 100" fill="none" />
+    <path id="cmgc-bottom-arc" d="M 178 100 A 78 78 0 0 1 22 100" fill="none" />
+  </defs>
+
+  <!-- Top Text: CLINIQUE MEDICALE -->
+  <text fill="#163E93" font-size="14.5" font-weight="800" font-family="'Plus Jakarta Sans', Arial, sans-serif" letter-spacing="2.8">
+    <textPath href="#cmgc-top-arc" startOffset="50%" text-anchor="middle">CLINIQUE MEDICALE</textPath>
+  </text>
+
+  <!-- Bottom Text: LE GRAND CENTRE -->
+  <text fill="#163E93" font-size="15" font-weight="800" font-family="'Plus Jakarta Sans', Arial, sans-serif" letter-spacing="2.6">
+    <textPath href="#cmgc-bottom-arc" startOffset="50%" text-anchor="middle">LE GRAND CENTRE</textPath>
+  </text>
+
+  <!-- Octagon Outer Outline -->
+  <polygon points="80,44 120,44 156,80 156,120 120,156 80,156 44,120 44,80" fill="#FFFFFF" stroke="#163E93" stroke-width="3.2" stroke-linejoin="round" />
+
+  <!-- Cross Solid Blue Shape -->
+  <path d="M 80,44 L 120,44 L 120,80 L 156,80 L 156,120 L 120,120 L 120,156 L 80,156 L 80,120 L 44,120 L 44,80 L 80,80 Z" fill="#163E93" />
+
+  <!-- White Letters Inside Cross -->
+  <text x="100" y="72" fill="#FFFFFF" font-size="24" font-weight="900" font-family="'Plus Jakarta Sans', Arial, sans-serif" text-anchor="middle" dominant-baseline="central">C</text>
+  <text x="62" y="100" fill="#FFFFFF" font-size="21" font-weight="900" font-family="'Plus Jakarta Sans', Arial, sans-serif" text-anchor="middle" dominant-baseline="central">M</text>
+
+  <!-- Center White Plus Sign -->
+  <path d="M 97,97 v -8 h 6 v 8 h 8 v 6 h -8 v 8 h -6 v -8 h -8 v -6 h 8 Z" fill="#FFFFFF" />
+
+  <!-- Right Arm: G -->
+  <text x="138" y="100" fill="#FFFFFF" font-size="23" font-weight="900" font-style="italic" font-family="'Plus Jakarta Sans', Arial, sans-serif" text-anchor="middle" dominant-baseline="central">G</text>
+
+  <!-- Bottom Arm: C -->
+  <text x="100" y="138" fill="#FFFFFF" font-size="24" font-weight="900" font-family="'Plus Jakarta Sans', Arial, sans-serif" text-anchor="middle" dominant-baseline="central">C</text>
+</svg>
