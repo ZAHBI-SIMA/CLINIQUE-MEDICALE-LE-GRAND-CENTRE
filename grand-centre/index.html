@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinique Médicale Le Grand Centre — Votre santé, notre priorité</title>
+  <meta name="description" content="Site officiel de la Clinique Médicale Le Grand Centre à Abidjan : consultations spécialisées, urgences 24h/24, chirurgie, maternité et prise de rendez-vous en ligne.">
+  <link rel="canonical" href="https://legrandcentre-clinique.com">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <!-- CSS Vanilla Architecture -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Clinique Médicale Le Grand Centre",
+    "telephone": "+2252722550000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Boulevard Hassan II, Cocody",
+      "addressLocality": "Abidjan",
+      "addressCountry": "CI"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top bar urgences -->
+  <div class="top-bar">
+    <div class="container">
+      <div>🚨 Urgences 24/7 : Ouvertes sans interruption · Cocody, Abidjan</div>
+      <div>
+        Ligne d'urgence : <a href="tel:+2250707112233">+225 07 07 11 22 33</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Sticky -->
+  <header class="main-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo-wrap">
+          <img src="assets/images/logo.svg" alt="Logo Clinique Médicale Le Grand Centre" width="46" height="46" style="width: 46px; height: 46px; object-fit: contain;">
+          <div class="logo-text">
+            <span>Clinique Médicale</span>
+            <strong>Le Grand Centre</strong>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="desktop-nav">
+          <ul class="nav-links">
+            <li><a href="#accueil" class="active">Accueil</a></li>
+            <li><a href="pages/clinique.html">La clinique</a></li>
+            <li><a href="pages/specialites.html">Spécialités</a></li>
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/medecins.html">Médecins</a></li>
+            <li><a href="pages/actualites.html">Actualités</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <a href="#rendez-vous" class="btn btn-primary">Prendre rendez-vous</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="accueil" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-tag">🏥 Établissement Médical de Référence</div>
+          <h1 class="hero-title">
+            Votre santé, <br>
+            <span>notre priorité</span>
+          </h1>
+          <p class="hero-desc">
+            La Clinique Médicale Le Grand Centre vous accompagne avec une prise en charge médicale professionnelle, humaine et adaptée à vos besoins.
+          </p>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="#rendez-vous" class="btn btn-primary" style="padding: 14px 28px; font-size: 1rem;">
+              📅 Prendre rendez-vous
+            </a>
+            <a href="tel:+2252722550000" class="btn btn-secondary" style="padding: 14px 28px; font-size: 1rem;">
+              📞 Appeler la clinique
+            </a>
+          </div>
+
+          <div class="hero-badges">
+            <div>✓ Équipe médicale qualifiée</div>
+            <div>✓ Prise en charge personnalisée</div>
+            <div>✓ Plateau technique moderne</div>
+          </div>
+        </div>
+
+        <div>
+          <img src="assets/images/facade.jpg" alt="Façade officielle de la Clinique Médicale Le Grand Centre" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); object-fit: cover; aspect-ratio: 4/3;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spécialités -->
+  <section id="specialites" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Pôles d'excellence</div>
+        <h2 class="section-title">Nos Spécialités Médicales</h2>
+        <p class="section-subtitle">Diagnostic de pointe et consultations assurées par des spécialistes chevronnés.</p>
+      </div>
+
+      <div class="grid-cards">
+        <div class="card-spec">
+          <div>
+            <div class="card-icon">❤️</div>
+            <h3 style="font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 8px;">Cardiologie</h3>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px;">
+              Diagnostic, explorations non-invasives (Holter, ECG) et suivi préventif cardiovasculaire.
+            </p>
+          </div>
+          <a href="#rendez-vous" style="font-size: 0.8rem; font-weight: 700; color: var(--primary);">Prendre RDV →</a>
+        </div>
+
+        <div class="card-spec">
+          <div>
+            <div class="card-icon">👶</div>
+            <h3 style="font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 8px;">Pédiatrie</h3>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px;">
+              Suivi du développement, vaccinations et urgences pédiatriques de la naissance à l'adolescence.
+            </p>
+          </div>
+          <a href="#rendez-vous" style="font-size: 0.8rem; font-weight: 700; color: var(--primary);">Prendre RDV →</a>
+        </div>
+
+        <div class="card-spec">
+          <div>
+            <div class="card-icon">🌸</div>
+            <h3 style="font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 8px;">Gynécologie</h3>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px;">
+              Suivi prénatal, échographies 3D/4D, accouchement sécurisé et santé de la femme.
+            </p>
+          </div>
+          <a href="#rendez-vous" style="font-size: 0.8rem; font-weight: 700; color: var(--primary);">Prendre RDV →</a>
+        </div>
+
+        <div class="card-spec">
+          <div>
+            <div class="card-icon">🩺</div>
+            <h3 style="font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 8px;">Médecine Générale</h3>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px;">
+              Bilans de santé exhaustifs, prévention et coordination des parcours de soins.
+            </p>
+          </div>
+          <a href="#rendez-vous" style="font-size: 0.8rem; font-weight: 700; color: var(--primary);">Prendre RDV →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pourquoi Nous Choisir & Chiffres Clés -->
+  <section class="section" style="background-color: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Qualité & Sécurité</div>
+        <h2 class="section-title">Pourquoi Choisir Le Grand Centre ?</h2>
+      </div>
+
+      <div class="stats-banner">
+        <div>
+          <div class="stat-val">25 000+</div>
+          <div class="stat-lbl">Patients soignés / an</div>
+        </div>
+        <div>
+          <div class="stat-val">35+</div>
+          <div class="stat-lbl">Médecins spécialistes</div>
+        </div>
+        <div>
+          <div class="stat-val">24/7</div>
+          <div class="stat-lbl">Urgences ouvertes</div>
+        </div>
+        <div>
+          <div class="stat-val">98%</div>
+          <div class="stat-lbl">Satisfaction certifiée</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prise de Rendez-vous Interactif (Vanilla JS) -->
+  <section id="rendez-vous" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Réservation Express</div>
+        <h2 class="section-title">Prendre Rendez-vous en Ligne</h2>
+        <p class="section-subtitle">Formulaire interactif sécurisé en moins de 2 minutes.</p>
+      </div>
+
+      <div id="appointment-wizard" class="wizard-box">
+        <!-- Étape 1 -->
+        <div class="step-pane" id="step-1">
+          <h3 style="margin-bottom: 14px; color: var(--primary-dark);">1. Choisissez la Spécialité</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+            <button type="button" class="btn btn-secondary spec-select-btn" data-id="cardio" data-name="Cardiologie">❤️ Cardiologie</button>
+            <button type="button" class="btn btn-secondary spec-select-btn" data-id="pediatrie" data-name="Pédiatrie">👶 Pédiatrie</button>
+            <button type="button" class="btn btn-secondary spec-select-btn" data-id="gyneco" data-name="Gynécologie">🌸 Gynécologie</button>
+            <button type="button" class="btn btn-secondary spec-select-btn" data-id="medecine" data-name="Médecine Générale">🩺 Médecine Générale</button>
+          </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="step-pane" id="step-2" style="display:none;">
+          <h3 style="margin-bottom: 14px; color: var(--primary-dark);">2. Choisissez votre Médecin</h3>
+          <div class="form-group">
+            <select id="doctor-select" class="form-control">
+              <option value="Premier praticien disponible">Premier praticien disponible (Le plus rapide)</option>
+            </select>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="button" class="btn btn-secondary btn-back">Précédent</button>
+            <button type="button" id="step-2-next" class="btn btn-primary">Continuer</button>
+          </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="step-pane" id="step-3" style="display:none;">
+          <h3 style="margin-bottom: 14px; color: var(--primary-dark);">3. Date et Heure</h3>
+          <div class="form-group">
+            <label for="date-select">Date souhaitée</label>
+            <input type="date" id="date-select" class="form-control" value="2026-10-15">
+          </div>
+          <div class="form-group">
+            <label for="time-select">Créneau horaire</label>
+            <select id="time-select" class="form-control">
+              <option value="08:30">08:30</option>
+              <option value="10:00">10:00</option>
+              <option value="14:30">14:30</option>
+              <option value="16:00">16:00</option>
+            </select>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="button" class="btn btn-secondary btn-back">Précédent</button>
+            <button type="button" id="step-3-next" class="btn btn-primary">Continuer</button>
+          </div>
+        </div>
+
+        <!-- Étape 4 -->
+        <div class="step-pane" id="step-4" style="display:none;">
+          <h3 style="margin-bottom: 14px; color: var(--primary-dark);">4. Coordonnées du Patient</h3>
+          <div class="form-group">
+            <label for="patient-name">Nom et prénom *</label>
+            <input type="text" id="patient-name" class="form-control" placeholder="Ex: Kouassi Paul">
+          </div>
+          <div class="form-group">
+            <label for="patient-phone">Numéro de téléphone *</label>
+            <input type="tel" id="patient-phone" class="form-control" placeholder="+225 07 00 11 22 33">
+          </div>
+          <div class="form-group">
+            <label for="patient-email">Email (optionnel)</label>
+            <input type="email" id="patient-email" class="form-control" placeholder="paul@exemple.com">
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="button" class="btn btn-secondary btn-back">Précédent</button>
+            <button type="button" id="step-4-submit" class="btn btn-primary">Valider mon rendez-vous</button>
+          </div>
+        </div>
+
+        <!-- Étape 5 : Reçu Confirmation -->
+        <div class="step-pane" id="step-5" style="display:none; text-align: center;">
+          <div style="font-size: 3rem; color: #10B981; margin-bottom: 10px;">✓</div>
+          <h3 style="color: var(--primary-dark); font-size: 1.5rem; margin-bottom: 8px;">Rendez-vous Confirmé !</h3>
+          <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px;">
+            Votre convocation médicale a été générée.
+          </p>
+
+          <div style="background: white; border: 2px dashed var(--border); border-radius: var(--radius-md); padding: 20px; text-align: left; max-width: 450px; margin: 0 auto 20px;">
+            <p><strong>N° Dossier :</strong> <span id="recap-ref"></span></p>
+            <p><strong>Patient :</strong> <span id="recap-nom"></span></p>
+            <p><strong>Spécialité :</strong> <span id="recap-spec"></span></p>
+            <p><strong>Médecin :</strong> <span id="recap-doc"></span></p>
+            <p><strong>Date & Heure :</strong> <span id="recap-date"></span></p>
+          </div>
+
+          <div style="display: flex; gap: 10px; justify-content: center;">
+            <button type="button" id="btn-print-pass" class="btn btn-secondary">🖨️ Imprimer</button>
+            <button type="button" id="btn-reset-rdv" class="btn btn-primary">Nouveau RDV</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section id="faq" class="section" style="background-color: var(--white);">
+    <div class="container" style="max-w: 800px;">
+      <div class="section-header">
+        <div class="section-kicker">Questions courantes</div>
+        <h2 class="section-title">Foire Aux Questions</h2>
+      </div>
+
+      <div class="faq-item active">
+        <button class="faq-question">
+          <span>Comment prendre rendez-vous ?</span>
+          <span class="faq-icon">−</span>
+        </button>
+        <div class="faq-answer">
+          Directement en ligne sur cette plateforme en moins de 2 minutes, ou en contactant notre accueil téléphonique au +225 27 22 55 00 00.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Quels sont vos horaires et urgences ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Les consultations sur rendez-vous se déroulent du lundi au samedi de 07h30 à 20h00. Le service des urgences et de réanimation est ouvert 24h/24 et 7j/7.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Quels moyens de paiement et assurances acceptez-vous ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Nous acceptons les espèces, cartes bancaires, mobile money (Wave, Orange Money, MTN) ainsi que le tiers payant avec plus de 20 compagnies d'assurance (Ascoma, Sanlam, Sunu, Saham, Allianz, etc.).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localisation Google Maps -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Plan d'accès</div>
+        <h2 class="section-title">Nous Trouver</h2>
+        <p class="section-subtitle">Boulevard Hassan II, Carrefour du Grand Centre, Cocody, Abidjan</p>
+      </div>
+
+      <div style="border-radius: var(--radius-lg); overflow: hidden; height: 350px; box-shadow: var(--shadow-sm); border: 1px solid var(--border);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.482813589408!2d-3.989912!3d5.358241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1945638c4b7b3%3A0x6bfa9e67ad10850!2sCocody%2C%20Abidjan!5e0!3m2!1sfr!2sci!4v1700000000000!5m2!1sfr!2sci" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <img src="assets/images/logo.svg" alt="Logo Clinique Médicale Le Grand Centre" width="44" height="44" style="background: white; border-radius: 8px; padding: 2px;">
+            <h4 style="color: white; font-size: 1.15rem; font-weight: 800; line-height: 1.2;">Clinique Médicale<br>Le Grand Centre</h4>
+          </div>
+          <p style="font-size: 0.85rem; color: #CBD5E1; line-height: 1.6;">
+            Soins d'excellence, médecine spécialisée et permanence des urgences 24h/24 et 7j/7 à Abidjan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="pages/specialites.html">Spécialités</a></li>
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/medecins.html">Médecins</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Légal</h5>
+          <ul>
+            <li><a href="pages/mentions-legales.html">Mentions Légales</a></li>
+            <li><a href="pages/confidentialite.html">Confidentialité</a></li>
+            <li><a href="pages/urgences.html">Urgences 24/7</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li>Tél : <a href="tel:+2252722550000" style="color: var(--accent);">+225 27 22 55 00 00</a></li>
+            <li>Urgences : <a href="tel:+2250707112233" style="color: #F87171;">+225 07 07 11 22 33</a></li>
+            <li>Boulevard Hassan II, Cocody, Abidjan</li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align: center; font-size: 0.75rem; color: #94A3B8; padding-top: 24px;">
+        © 2026 Clinique Médicale Le Grand Centre. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Bouton Flottant -->
+  <a href="https://wa.me/2250707112233?text=Bonjour%20Clinique%20Le%20Grand%20Centre" target="_blank" rel="noopener noreferrer" class="whatsapp-float whatsapp-trigger" aria-label="Contacter la clinique sur WhatsApp">
+    💬
+  </a>
+
+  <!-- Barre CTA Fixe Mobile -->
+  <div class="mobile-bar">
+    <div class="mobile-bar-grid">
+      <a href="tel:+2252722550000">
+        📞 Appeler
+      </a>
+      <a href="#rendez-vous" class="btn-rdv-mob">
+        📅 RDV
+      </a>
+      <a href="https://wa.me/2250707112233?text=Bonjour" target="_blank" rel="noopener noreferrer" class="whatsapp-trigger">
+        💬 WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- Scripts Vanilla ES6+ -->
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/appointment.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

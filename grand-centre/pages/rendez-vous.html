@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prise de Rendez-vous — Clinique Le Grand Centre</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo-wrap">
+          <img src="../assets/images/logo.svg" alt="Logo Clinique Médicale Le Grand Centre" width="44" height="44" style="width: 44px; height: 44px; object-fit: contain;">
+          <div class="logo-text">
+            <span>Clinique Médicale</span>
+            <strong>Le Grand Centre</strong>
+          </div>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="clinique.html">La clinique</a></li>
+            <li><a href="specialites.html">Spécialités</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="medecins.html">Médecins</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Réservation en Ligne</div>
+        <h1 class="section-title">Prendre un Rendez-vous</h1>
+        <p class="section-subtitle">
+          Sélectionnez vos critères pour obtenir un rendez-vous médical sans attente.
+        </p>
+      </div>
+
+      <div id="appointment-wizard" class="wizard-box">
+        <div class="step-pane" id="step-1">
+          <h3 style="margin-bottom: 14px; color: var(--primary-dark);">1. Spécialité Médicale</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+            <button type="button" class="btn btn-secondary spec-select-btn" data-id="cardio" data-name="Cardiologie">❤️ Cardiologie</button>
+            <button type="button" class="btn btn-secondary spec-select-btn" data-id="pediatrie" data-name="Pédiatrie">👶 Pédiatrie</button>
+            <button type="button" class="btn btn-secondary spec-select-btn" data-id="gyneco" data-name="Gynécologie">🌸 Gynécologie</button>
+            <button type="button" class="btn btn-secondary spec-select-btn" data-id="medecine" data-name="Médecine Générale">🩺 Médecine Générale</button>
+          </div>
+        </div>
+
+        <div class="step-pane" id="step-2" style="display:none;">
+          <h3 style="margin-bottom: 14px; color: var(--primary-dark);">2. Médecin</h3>
+          <div class="form-group">
+            <select id="doctor-select" class="form-control">
+              <option value="Premier praticien disponible">Premier praticien disponible</option>
+            </select>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="button" class="btn btn-secondary btn-back">Précédent</button>
+            <button type="button" id="step-2-next" class="btn btn-primary">Continuer</button>
+          </div>
+        </div>
+
+        <div class="step-pane" id="step-3" style="display:none;">
+          <h3 style="margin-bottom: 14px; color: var(--primary-dark);">3. Date & Heure</h3>
+          <div class="form-group">
+            <label for="date-select">Date souhaitée</label>
+            <input type="date" id="date-select" class="form-control" value="2026-10-15">
+          </div>
+          <div class="form-group">
+            <label for="time-select">Horaire</label>
+            <select id="time-select" class="form-control">
+              <option value="08:30">08:30</option>
+              <option value="10:00">10:00</option>
+              <option value="14:30">14:30</option>
+              <option value="16:00">16:00</option>
+            </select>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="button" class="btn btn-secondary btn-back">Précédent</button>
+            <button type="button" id="step-3-next" class="btn btn-primary">Continuer</button>
+          </div>
+        </div>
+
+        <div class="step-pane" id="step-4" style="display:none;">
+          <h3 style="margin-bottom: 14px; color: var(--primary-dark);">4. Informations Patient</h3>
+          <div class="form-group">
+            <label for="patient-name">Nom et prénom *</label>
+            <input type="text" id="patient-name" class="form-control" placeholder="Votre nom complet">
+          </div>
+          <div class="form-group">
+            <label for="patient-phone">Téléphone *</label>
+            <input type="tel" id="patient-phone" class="form-control" placeholder="+225 07...">
+          </div>
+          <div class="form-group">
+            <label for="patient-email">Email (optionnel)</label>
+            <input type="email" id="patient-email" class="form-control" placeholder="email@exemple.com">
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="button" class="btn btn-secondary btn-back">Précédent</button>
+            <button type="button" id="step-4-submit" class="btn btn-primary">Confirmer</button>
+          </div>
+        </div>
+
+        <div class="step-pane" id="step-5" style="display:none; text-align: center;">
+          <div style="font-size: 3rem; color: #10B981; margin-bottom: 10px;">✓</div>
+          <h3 style="color: var(--primary-dark); font-size: 1.5rem; margin-bottom: 8px;">Rendez-vous Confirmé !</h3>
+          <div style="background: white; border: 2px dashed var(--border); border-radius: var(--radius-md); padding: 20px; text-align: left; max-width: 450px; margin: 20px auto;">
+            <p><strong>N° Dossier :</strong> <span id="recap-ref"></span></p>
+            <p><strong>Patient :</strong> <span id="recap-nom"></span></p>
+            <p><strong>Spécialité :</strong> <span id="recap-spec"></span></p>
+            <p><strong>Médecin :</strong> <span id="recap-doc"></span></p>
+            <p><strong>Date & Heure :</strong> <span id="recap-date"></span></p>
+          </div>
+          <button type="button" id="btn-print-pass" class="btn btn-secondary">🖨️ Imprimer la convocation</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/appointment.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinique Médicale Le Grand Centre – Votre santé, notre priorité</title>
+    <meta name="description" content="La Clinique Médicale Le Grand Centre vous accueille pour des consultations spécialisées, urgences 24h/24, examens et prise de rendez-vous en ligne rapide." />
+    <link rel="canonical" href="https://legrandcentre-clinique.com" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Clinique Médicale Le Grand Centre – Votre santé, notre priorité" />
+    <meta property="og:description" content="Prise en charge médicale d'excellence, équipe pluridisciplinaire, urgences 24/7 et prise de rendez-vous rapide." />
+    <meta property="og:url" content="https://legrandcentre-clinique.com" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Clinique Médicale Le Grand Centre" />
+    <meta name="twitter:description" content="Excellence des soins médicaux, plateau technique moderne et service d'urgences 24/7." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org JSON-LD Structured Data for MedicalClinic -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Clinique Médicale Le Grand Centre",
+      "image": "https://legrandcentre-clinique.com/assets/images/clinique.jpg",
+      "url": "https://legrandcentre-clinique.com",
+      "telephone": "+225 27 22 55 00 00",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Boulevard Hassan II, Carrefour du Grand Centre",
+        "addressLocality": "Abidjan",
+        "addressRegion": "Cocody",
+        "postalCode": "01 BP 4500",
+        "addressCountry": "CI"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 5.359951,
+        "longitude": -3.987823
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:30",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "00:00",
+          "closes": "23:59",
+          "description": "Service des urgences médicales et réanimation ouvert 24h/24 et 7j/7"
+        }
+      ],
+      "medicalSpecialty": [
+        "Cardiology",
+        "Pediatrics",
+        "Obstetrics",
+        "GeneralPractice",
+        "Surgery",
+        "Radiology",
+        "Ophthalmology",
+        "Dentistry"
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalProcedure",
+          "name": "Consultations Spécialisées"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Service d'Urgences 24/7"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Laboratoire d'Analyses Médicales"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Imagerie Médicale & Scanner"
+        }
+      ]
+    }
+    </script>
+    <meta name="theme-color" content="#163E93" />
+  </head>
+  <body class="bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-[#163E93]/20 selection:text-[#0E2866]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

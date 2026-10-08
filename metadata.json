@@ -1,0 +1,6 @@
+{
+  "name": "Clinique Médicale Le Grand Centre",
+  "description": "Site vitrine officiel et plateforme de prise de rendez-vous de la Clinique Médicale Le Grand Centre. Soins d'excellence, urgences 24/7 et équipe médicale pluridisciplinaire.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

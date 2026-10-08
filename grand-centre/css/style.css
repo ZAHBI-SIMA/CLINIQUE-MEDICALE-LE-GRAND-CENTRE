@@ -1,0 +1,501 @@
+/* ==========================================================================
+   Clinique Médicale Le Grand Centre - Feuille de Style Principale
+   Palette Officielle (Alignée sur le logo CMGC) :
+   --primary: #163E93;
+   --primary-dark: #0E2866;
+   --secondary: #2563EB;
+   --accent: #F59E0B;
+   --background: #F8FAFC;
+   --white: #FFFFFF;
+   --text: #0F172A;
+   --text-light: #64748B;
+   ========================================================================== */
+
+:root {
+  --primary: #163E93;
+  --primary-dark: #0E2866;
+  --secondary: #2563EB;
+  --accent: #F59E0B;
+  --background: #F8FAFC;
+  --white: #FFFFFF;
+  --text: #0F172A;
+  --text-light: #64748B;
+  --border: #E2E8F0;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Micro bar urgences */
+.top-bar {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  font-size: 0.75rem;
+  padding: 6px 0;
+}
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Header sticky */
+header.main-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+header.main-header.scrolled {
+  padding: 6px 0;
+  box-shadow: var(--shadow-sm);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.logo-text span {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+.logo-text strong {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  line-height: 1;
+}
+
+/* Nav Desktop */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-light);
+  transition: color 0.2s;
+  padding: 6px 0;
+  position: relative;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: var(--primary);
+}
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  border-radius: 2px;
+}
+
+/* Boutons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover {
+  background-color: var(--background);
+}
+.btn-accent {
+  background-color: var(--accent);
+  color: var(--primary-dark);
+}
+.btn-accent:hover {
+  opacity: 0.92;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 60px 0 80px;
+  background: linear-gradient(180deg, var(--background) 0%, var(--white) 100%);
+  border-bottom: 1px solid var(--border);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background-color: rgba(11, 93, 107, 0.08);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.hero-title span {
+  color: var(--primary);
+}
+.hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+.hero-badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Sections Générales */
+.section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border);
+}
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px;
+}
+.section-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+/* Grilles Spécialités */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.card-spec {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-spec:hover {
+  background-color: var(--white);
+  border-color: var(--secondary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.card-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  transition: background-color 0.2s;
+}
+.card-spec:hover .card-icon {
+  background-color: rgba(39, 166, 166, 0.15);
+}
+
+/* Chiffres Clés */
+.stats-banner {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+.stat-val {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+.stat-lbl {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Formulaire Prise de Rendez-vous */
+.wizard-box {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background-color: var(--white);
+  font-family: inherit;
+  font-size: 0.875rem;
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(11, 93, 107, 0.15);
+}
+
+/* FAQ Accordéon */
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--white);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 18px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* Footer */
+footer.main-footer {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 60px 0 30px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 36px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-col h5 {
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  list-style: none;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  color: #CBD5E1;
+}
+
+/* WhatsApp Flottant */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 999;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+/* Barre Mobile Fixe */
+.mobile-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid var(--border);
+  padding: 8px 12px;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+.mobile-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.mobile-bar a, .mobile-bar button {
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.mobile-bar .btn-rdv-mob {
+  background-color: var(--primary);
+  color: white;
+}

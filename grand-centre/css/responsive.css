@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Clinique Médicale Le Grand Centre - Responsive Rules
+   Mobile (320px - 767px), Tablet (768px - 1023px), Desktop (1024px+)
+   ========================================================================== */
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-badges {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .stats-banner {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+    gap: 16px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .mobile-bar {
+    display: block;
+  }
+  .whatsapp-float {
+    bottom: 74px; /* avoid overlapping mobile bar */
+  }
+  body {
+    padding-bottom: 60px;
+  }
+  .section {
+    padding: 50px 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+  }
+  .stats-banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}

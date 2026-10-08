@@ -1,0 +1,179 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Patient or staff user profile",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Unique Firebase Authentication UID"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "User email address"
+        },
+        "displayName": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Full name of the user"
+        },
+        "phone": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Phone contact"
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "Profile picture URL"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation ISO timestamp"
+        }
+      },
+      "required": ["uid", "email"]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Medical appointment booking at Clinique Le Grand Centre",
+      "type": "object",
+      "properties": {
+        "confirmationCode": {
+          "type": "string",
+          "maxLength": 50,
+          "pattern": "^[A-Za-z0-9-]+$",
+          "description": "Human-readable confirmation code (e.g. GC-2026-1234)"
+        },
+        "fullName": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100,
+          "description": "Full patient name"
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 25,
+          "description": "Patient phone number"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 120,
+          "description": "Patient email address"
+        },
+        "specialtyId": {
+          "type": "string",
+          "maxLength": 50,
+          "description": "Medical specialty ID"
+        },
+        "specialtyName": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Medical specialty label"
+        },
+        "doctorId": {
+          "type": "string",
+          "maxLength": 50,
+          "description": "Doctor ID or empty for first available"
+        },
+        "doctorName": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Doctor name or first available"
+        },
+        "date": {
+          "type": "string",
+          "maxLength": 15,
+          "description": "Appointment date YYYY-MM-DD"
+        },
+        "time": {
+          "type": "string",
+          "maxLength": 10,
+          "description": "Appointment time slot HH:MM"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Optional patient notes"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["confirme", "annule", "termine"],
+          "description": "Appointment status"
+        },
+        "userId": {
+          "type": "string",
+          "maxLength": 128,
+          "description": "Optional patient user UID if authenticated"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["confirmationCode", "fullName", "phone", "specialtyName", "date", "time", "status"]
+    },
+    "ContactMessage": {
+      "title": "ContactMessage",
+      "description": "Inquiry submitted through the clinic contact form",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100,
+          "description": "Contact sender full name"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 120,
+          "description": "Contact sender email"
+        },
+        "phone": {
+          "type": "string",
+          "maxLength": 25,
+          "description": "Contact sender phone number"
+        },
+        "subject": {
+          "type": "string",
+          "maxLength": 150,
+          "description": "Subject or department inquiry"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 1000,
+          "description": "Inquiry message content"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["nouveau", "traite"],
+          "description": "Status of the message"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Submission timestamp"
+        }
+      },
+      "required": ["name", "email", "message"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile records accessible by the user and admins"
+    },
+    "/appointments/{appointmentId}": {
+      "schema": "Appointment",
+      "description": "Medical appointment bookings"
+    },
+    "/contact_messages/{messageId}": {
+      "schema": "ContactMessage",
+      "description": "Inquiries submitted by clinic visitors"
+    }
+  }
+}
